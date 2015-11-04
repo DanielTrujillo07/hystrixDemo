@@ -1,0 +1,27 @@
+* El directorio Hystrix contiene todo el source de Hystrix
+* Para ejecutar la libreria de dashboard se debe ejecutar por consola:
+	- cd Hystrix/hystrix-dashboard
+	- ../gradlew jettyRun
+	- Acceder http://localhost:7979/hystrix-dashboard/
+
+* Para ejecutar los demos, se puede de 2 maneras:
+	- cd hystrixTests/
+	- Demo 1. 
+		- sbt clea update compile run
+		- http://localhost:9000/hystrix/sincrono (DEMO1 sincrono)
+		- O bien podria ejecutarse directamente la clase Main co.com.s4n.hystrix.invocacion_sincrona.Main
+	- Demo 2. 
+		- sbt clea update compile run
+		- http://localhost:9000/hystrix/asincrono (DEMO2 asincrono)
+		- O bien podria ejecutarse directamente la clase Main co.com.s4n.hystrix.invocacion_asincrona.Main
+	- Demo 3. 
+		- sbt clea update compile run
+		- http://localhost:9000/hystrix/dashboard (Para subir el JETTY (contenedor de servlets) Interno)
+		- http://localhost:7979/hystrix-dashboard/ (Libreria ddashboard de Netflix)
+			-  Ponemos en el campo de este formulario: http://localhost:9002/hystrix.stream (obtiene la informacion de disco)
+			-  Ponemos en el campo de este formulario: http://localhost:9002/hystrix2.stream (informacion de nuestra ejecucion)
+				- Ejecutar demo1 o demo2 desde las url para ver como se obtiene informacion
+
+
+
+
